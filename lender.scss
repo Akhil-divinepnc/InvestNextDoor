@@ -1,0 +1,186 @@
+@charset "utf-8";
+/* CSS Document */
+
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    color: #000;
+    background: #000;
+}
+.navbar {
+    position: relative;
+    min-height: 80px;
+    margin-bottom: 20px;
+    border: none;
+}
+#navbar{
+    padding: 18px;
+}
+.navbar-brand {
+    float: left;
+    height: 50px;
+     padding:10px 5px; 
+    font-size: 18px;
+    line-height: 20px;
+}
+.navbar-brand img{
+	max-width:115px;	
+}
+.nav>li>a{
+	font-size:15px;
+	color:#222;	
+}
+.navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+.m-btn{
+    background: #4965ae;
+    border-radius: 10px;
+    color: #fff !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+a.m-btn:hover, a.m-btn:focus{
+    background: #4965ae !important;
+    border-radius: 10px;
+    color: #fff !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.drop-select{
+	height:26px;	
+}
+.m-1{
+	max-width: 240px;
+    width: 100%;	
+}
+.m-2{
+	max-width: 180px;
+    width: 100%;	
+}
+.m-3{
+	max-width: 100px;
+    width: 100%;	
+}
+.m-12{
+	margin-bottom:20px;	
+}
+.p-left{
+	margin-right:5px;
+}
+.p-width{
+	width:25.3%;	
+}
+/*input[type="text"], input[type="email"], input[type="tel"], select{
+	width:335px;
+}*/
+.nav>li>a:focus, .nav>li>a:hover{
+	background:transparent;
+}
+.p-right{
+ padding-right:0px;	
+}
+
+.lg-input {
+    max-width: 72% !important;
+    width: 50% !important;
+}
+label {
+    /*width: 240px;*/
+    margin-right: 18px;
+	float:none;
+}
+
+footer.ftr {
+    height: 100px;
+    background: #222222;
+}
+footer.ftr ul{
+    position: relative;
+    list-style: none;
+}
+footer.ftr ul li {
+    line-height: normal;
+    display: inline-block;
+    padding: 40px 8px;
+    font-size: 16px;
+}
+footer.ftr ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-icon{
+	padding:36px;	
+}
+ .social {
+     -webkit-transform: scale(0.8);
+     /* Browser Variations: */
+     
+     -moz-transform: scale(0.8);
+     -o-transform: scale(0.8);
+     -webkit-transition-duration: 0.5s;
+     -moz-transition-duration: 0.5s;
+     -o-transition-duration: 0.5s;
+	 color:#fff;
+ }
+
+/*
+    Multicoloured Hover Variations
+*/
+  .social a{
+     width: 100%;
+    position: relative;
+    padding: 5px;
+	color:#fff;
+}
+ #social-fb:hover {
+     color: #3B5998;
+ }
+ #social-tw:hover {
+     color: #4099FF;
+ }
+ #social-gp:hover {
+     color: #d34836;
+ }
+
+input[type="checkbox"]{
+    vertical-align: middle;
+    height: 17px;
+    width: 17px;
+	margin:1px 5px 1px;
+	
+}
+.btn-info{
+    padding: 10px 36px;
+    font-size: 18px;
+	background: #4965ae !important;
+    border-radius: 10px !important;
+    color: #fff !important;
+}
+.m-form{
+	margin-bottom:20px;	
+}
+.cont-check{
+	padding:15px;	
+}
+
+.customer-type ul{
+    list-style: none;
+    margin: 0;
+    padding: 5px 15px;
+	float:left;
+}
+.cunsumer li {
+    padding-top: 1px;
+}
+.customer-group ul, .product-group ul{
+    list-style: none;
+    margin: 0;
+    padding: 5px 15px;
+	float:left;
+}

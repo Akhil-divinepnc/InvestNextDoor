@@ -1,0 +1,989 @@
+<div class="container">
+<div class="row">
+<h2>Consumer Credit Card Loan Thresholds</h2>
+
+<p>Please fill out your institution’s thresholds for each of the credit variables below, that you would like the system to use to process a borrower’s application.</p>
+<p>For each product you would like to issue through IND Engage, please identify the minimum and maximum thresholds for each of the following “Essential” underwriting criteria, and indicate if any criteria have minimum “Auto-approval” thresholds, or “Auto-decline” thresholds. If there are additional criteria you require, please consult our Underwriting Master List and add them to the “Other” section.</p>
+ 
+ 
+<h3>Credit Card Loan</h3>
+ 
+<div>
+<table border="1">
+
+<tr>
+<td colspan="3">PRODUCT SCORE</td>
+<td colspan="1">Section Header</td>
+
+</tr>
+
+<tr>
+<th>Pre-approval</th>
+<th>Auto-approval</th>
+<th>Auto-decline</th>
+<th></th>
+</tr>
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio" ng-model="autoapprovedEQUIFAX" ng-value="true">Yes
+<input type="radio" ng-model="autoapprovedEQUIFAX" ng-value="false">NO
+<span ng-show="autoapprovedEQUIFAX">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineEQUIFAX" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineEQUIFAX" ng-value="false">NO
+<span ng-show="autodiclineEQUIFAX">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</div></td>
+<td>EQUIFAX RISK SCORE</td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedBANKRUPTCY" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedBANKRUPTCY" ng-value="false">NO
+<span ng-show="autoapprovedBANKRUPTCY">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineBANKRUPTCY" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineBANKRUPTCY" ng-value="false">NO
+<span ng-show="autodiclineBANKRUPTCY">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+
+<td>BANKRUPTCY NAVIGATOR INDEX</td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedPUB" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedPUB" ng-value="false">NO
+<span ng-show="autoapprovedPUB">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclinePUB" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclinePUB" ng-value="false">NO
+<span ng-show="autodiclinePUB">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>SUMMARY  - PUB/OTHER</td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedTRADE" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedTRADE" ng-value="false">NO
+<span ng-show="autoapprovedTRADE">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineTRADE" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineTRADE" ng-value="false">NO
+<span ng-show="autodiclineTRADE">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>SUMMARY  - TRADE OLDEST-NEWEST</td>
+</tr>
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedTOTAL" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedTOTAL" ng-value="false">NO
+<span ng-show="autoapprovedTOTAL">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineTOTAL" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineTOTAL" ng-value="false">NO
+<span ng-show="autodiclineTOTAL">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>SUMMARY  - TOTAL</td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedHIGHCREDIT" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedHIGHCREDIT" ng-value="false">NO
+<span ng-show="autoapprovedHIGHCREDIT">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineHIGHCREDIT" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineHIGHCREDIT" ng-value="false">NO
+<span ng-show="autodiclineHIGHCREDIT">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>SUMMARY  - HIGH CREDIT</td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedRATING" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedRATING" ng-value="false">NO
+<span ng-show="autoapprovedRATING">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineRATING" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineRATING" ng-value="false">NO
+<span ng-show="autodiclineRATING">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>SUMMARY  - RATING</td>
+</tr>
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedPUBLIC" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedPUBLIC" ng-value="false">NO
+<span ng-show="autoapprovedPUBLIC">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclinePUBLIC" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclinePUBLIC" ng-value="false">NO
+<span ng-show="autodiclinePUBLIC">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>PUBLIC RECORDS/OTHER INFORMATION</td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedBANKRUPTCY1" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedBANKRUPTCY1" ng-value="false">NO
+<span ng-show="autoapprovedBANKRUPTCY1">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineBANKRUPTCY1" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineBANKRUPTCY1" ng-value="false">NO
+<span ng-show="autodiclineBANKRUPTCY1">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>INFORMATION FROM THE SUPERINTENDENT OF BANKRUPTCY</td>
+</tr>
+
+
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio" ng-model="autoapprovedBANKRUPTCYField" ng-value="true">Yes
+<input type="radio" ng-model="autoapprovedBANKRUPTCYField" ng-value="false">NO
+<span ng-show="autoapprovedBANKRUPTCYField">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineBANKRUPTCYField" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineBANKRUPTCYField" ng-value="false">NO
+<span ng-show="autodiclineBANKRUPTCYField">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</div></td>
+<td>INFORMATION FROM THE SUPERINTENDENT OF BANKRUPTCY-FILED</td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedBANKRUPTCYtype" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedBANKRUPTCYtype" ng-value="false">NO
+<span ng-show="autoapprovedBANKRUPTCYtype">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineBANKRUPTCYtype" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineBANKRUPTCYtype" ng-value="false">NO
+<span ng-show="autodiclineBANKRUPTCYtype">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>INFORMATION FROM THE SUPERINTENDENT OF BANKRUPTCY - TYPE</td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedCOURT" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedCOURT" ng-value="false">NO
+<span ng-show="autoapprovedCOURT">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineCOURT" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineCOURT" ng-value="false">NO
+<span ng-show="autodiclineCOURT">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>INFORMATION FROM THE SUPERINTENDENT OF BANKRUPTCY - COURT NAME/td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedCourtNO" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedCourtNO" ng-value="false">NO
+<span ng-show="autoapprovedCourtNO">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineCourtNO" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineCourtNO" ng-value="false">NO
+<span ng-show="autodiclineCourtNO">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>INFORMATION FROM THE SUPERINTENDENT OF BANKRUPTCY - COURT NO</td>
+</tr>
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedLIBA" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedLIBA" ng-value="false">NO
+<span ng-show="autoapprovedLIBA">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineLIBA" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineLIBA" ng-value="false">NO
+<span ng-show="autodiclineLIBA">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>INFORMATION FROM THE SUPERINTENDENT OF BANKRUPTCY - LIAB</td>
+</tr>
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedASSET" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedASSET" ng-value="false">NO
+<span ng-show="autoapprovedASSET">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineASSET" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineASSET" ng-value="false">NO
+<span ng-show="autodiclineASSET">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>INFORMATION FROM THE SUPERINTENDENT OF BANKRUPTCY - ASSET FILED BY</td>
+</tr>
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedSUBJECT" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedSUBJECT" ng-value="false">NO
+<span ng-show="autoapprovedSUBJECT">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineSUBJECT" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineSUBJECT" ng-value="false">NO
+<span ng-show="autodiclineSUBJECT">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>NFORMATION FROM THE SUPERINTENDENT OF BANKRUPTCY - SUBJECT</td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedTRUSTEE" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedTRUSTEE" ng-value="false">NO
+<span ng-show="autoapprovedTRUSTEE">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineTRUSTEE" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineTRUSTEE" ng-value="false">NO
+<span ng-show="autodiclineTRUSTEE">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>INFORMATION FROM THE SUPERINTENDENT OF BANKRUPTCY - CASE NO/TRUSTEE</td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedDISPOSITION" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedDISPOSITION" ng-value="false">NO
+<span ng-show="autoapprovedDISPOSITION">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineDISPOSITION" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineDISPOSITION" ng-value="false">NO
+<span ng-show="autodiclineDISPOSITION">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>INFORMATION FROM THE SUPERINTENDENT OF BANKRUPTCY - DISPOSITION</td>
+</tr>
+
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedJdescription" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedJdescription" ng-value="false">NO
+<span ng-show="autoapprovedJdescription">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineJdescription" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineJdescription" ng-value="false">NO
+<span ng-show="autodiclineJdescription">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>INFORMATION FROM THE SUPERINTENDENT OF BANKRUPTCY - Jdescription</td>
+</tr>
+
+
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedCRPTD" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedCRPTD" ng-value="false">NO
+<span ng-show="autoapprovedCRPTD">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineCRPTD" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineCRPTD" ng-value="false">NO
+<span ng-show="autodiclineCRPTD">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>COLLECTION</td>
+</tr>
+
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedCRPTD" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedCRPTD" ng-value="false">NO
+<span ng-show="autoapprovedCRPTD">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineCRPTD" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineCRPTD" ng-value="false">NO
+<span ng-show="autodiclineCRPTD">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>COLLECTION-RPTD</td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedCtype" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedCtype" ng-value="false">NO
+<span ng-show="autoapprovedCtype">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineCtype" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineCtype" ng-value="false">NO
+<span ng-show="autodiclineCtype">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>COLLECTION-TYPE</td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedCamount" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedCamount" ng-value="false">NO
+<span ng-show="autoapprovedCamount">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineCamount" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineCamount" ng-value="false">NO
+<span ng-show="autodiclineCamount">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>COLLECTION-AMOUNT</td>
+</tr>
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedDLA" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedDLA" ng-value="false">NO
+<span ng-show="autoapprovedDLA">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineDLA" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineDLA" ng-value="false">NO
+<span ng-show="autodiclineDLA">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>COLLECTION-DLA</td>
+</tr>
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedBAL" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedBAL" ng-value="false">NO
+<span ng-show="autoapprovedBAL">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineBAL" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineBAL" ng-value="false">NO
+<span ng-show="autodiclineBAL">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>COLLECTION-BAL</td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedREASON" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedREASON" ng-value="false">NO
+<span ng-show="autoapprovedREASON">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineREASON" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineREASON" ng-value="false">NO
+<span ng-show="autodiclineREASON">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>COLLECTION-REASON</td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedLEDGER" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedLEDGER" ng-value="false">NO
+<span ng-show="autoapprovedLEDGER">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineLEDGER" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineLEDGER" ng-value="false">NO
+<span ng-show="autodiclineLEDGER">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>COLLECTION-LEDGER NUMBER</td>
+</tr>
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedVERIFIED" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedVERIFIED" ng-value="false">NO
+<span ng-show="autoapprovedVERIFIED">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineVERIFIED" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineVERIFIED" ng-value="false">NO
+<span ng-show="autodiclineVERIFIED">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>COLLECTION-VERIFIED DATE</td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedACCT" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedACCT" ng-value="false">NO
+<span ng-show="autoapprovedACCT">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineACCT" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineACCT" ng-value="false">NO
+<span ng-show="autodiclineACCT">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>COLLECTION-ACCT/CREDIT</td>
+</tr>
+
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedCJdescription" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedCJdescription" ng-value="false">NO
+<span ng-show="autoapprovedCJdescription">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineCJdescription" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineCJdescription" ng-value="false">NO
+<span ng-show="autodiclineCJdescription">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>COLLECTION-Jdescription</td>
+</tr>
+
+
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedFINANCE" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedFINANCE" ng-value="false">NO
+<span ng-show="autoapprovedFINANCE">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineFINANCE" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineFINANCE" ng-value="false">NO
+<span ng-show="autodiclineFINANCE">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>FINANCING STATEMENT</td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedFINANCEfield" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedFINANCEfield" ng-value="false">NO
+<span ng-show="autoapprovedFINANCEfield">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineFINANCEfield" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineFINANCEfield" ng-value="false">NO
+<span ng-show="autodiclineFINANCEfield">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>FINANCING STATEMENT- FILED</td>
+</tr>
+
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedFINANCEcourt" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedFINANCEcourt" ng-value="false">NO
+<span ng-show="autoapprovedFINANCEcourt">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineFINANCEcourt" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineFINANCEcourt" ng-value="false">NO
+<span ng-show="autodiclineFINANCEcourt">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>FINANCING STATEMENT - COURT NAME</td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedFINANCEcourtNO" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedFINANCEcourtNO" ng-value="false">NO
+<span ng-show="autoapprovedFINANCEcourtNO">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineFINANCEcourtNO" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineFINANCEcourtNO" ng-value="false">NO
+<span ng-show="autodiclineFINANCEcourtNO">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>FINANCING STATEMENT - COURT NO</td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedFINANCEMATURITY" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedFINANCEMATURITY" ng-value="false">NO
+<span ng-show="autoapprovedFINANCEMATURITY">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineFINANCEMATURITY" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineFINANCEMATURITY" ng-value="false">NO
+<span ng-show="autodiclineFINANCEMATURITY">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>FINANCING STATEMENT - MATURITY
+</td>
+</tr>
+
+
+
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedJUDGEMENT" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedJUDGEMENT" ng-value="false">NO
+<span ng-show="autoapprovedJUDGEMENT">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineJUDGEMENT" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineJUDGEMENT" ng-value="false">NO
+<span ng-show="autodiclineJUDGEMENT">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>JUDGEMENT 
+</td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedJfield" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedJfield" ng-value="false">NO
+<span ng-show="autoapprovedJfield">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineJfield" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineJfield" ng-value="false">NO
+<span ng-show="autodiclineJfield">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>JUDGEMENT - FILED</td>
+</tr>
+
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedJtype" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedJtype" ng-value="false">NO
+<span ng-show="autoapprovedJtype">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineJtype" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineJtype" ng-value="false">NO
+<span ng-show="autodiclineJtype">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>JUDGEMENT - TYPE
+</td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedJCOURTNAME" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedJCOURTNAME" ng-value="false">NO
+<span ng-show="autoapprovedJCOURTNAME">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineJCOURTNAME" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineJCOURTNAME" ng-value="false">NO
+<span ng-show="autodiclineJCOURTNAME">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>JUDGEMENT -COURT NAME
+</td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedJUDGEAMT" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedJUDGEAMT" ng-value="false">NO
+<span ng-show="autoapprovedJUDGEAMT">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineJUDGEAMT" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineJUDGEAMT" ng-value="false">NO
+<span ng-show="autodiclineJUDGEAMT">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>JUDGEMENT -AMT
+
+</td>
+</tr>
+
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedJSTATUS" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedJSTATUS" ng-value="false">NO
+<span ng-show="autoapprovedJSTATUS">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineJSTATUS" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineJSTATUS" ng-value="false">NO
+<span ng-show="autodiclineJSTATUS">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>JUDGEMENT -STATUS</td>
+</tr>
+
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedJDATE" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedJDATE" ng-value="false">NO
+<span ng-show="autoapprovedJDATE">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineJDATE" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineJDATE" ng-value="false">NO
+<span ng-show="autodiclineJDATE">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>JUDGEMENT -DATE
+</td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedDEFENDANT" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedDEFENDANT" ng-value="false">NO
+<span ng-show="autoapprovedDEFENDANT">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineDEFENDANT" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineDEFENDANT" ng-value="false">NO
+<span ng-show="autodiclineDEFENDANT">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>JUDGEMENT -DEFENDANT
+</td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedJcaseNO" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedJcaseNO" ng-value="false">NO
+<span ng-show="autoapprovedJcaseNO">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineJcaseNO" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineJcaseNO" ng-value="false">NO
+<span ng-show="autodiclineJcaseNO">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>JUDGEMENT -CASE NO
+
+</td>
+</tr>
+
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedPLANTIFF" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedPLANTIFF" ng-value="false">NO
+<span ng-show="autoapprovedPLANTIFF">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclinePLANTIFF" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclinePLANTIFF" ng-value="false">NO
+<span ng-show="autodiclinePLANTIFF">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>JUDGEMENT -PLANTIFF
+</td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedJdescription" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedJdescription" ng-value="false">NO
+<span ng-show="autoapprovedJdescription">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineJdescription" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineJdescription" ng-value="false">NO
+<span ng-show="autodiclineJdescription">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>JUDGEMENT -Jdescription
+
+</td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedMTCREDIT" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedMTCREDIT" ng-value="false">NO
+<span ng-show="autoapprovedMTCREDIT">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineMTCREDIT" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineMTCREDIT" ng-value="false">NO
+<span ng-show="autodiclineMTCREDIT">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>MEMBER TRADES - CREDIT LIMIT
+</td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedMTCREDIT" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedMTCREDIT" ng-value="false">NO
+<span ng-show="autoapprovedMTCREDIT">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineMTCREDIT" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineMTCREDIT" ng-value="false">NO
+<span ng-show="autodiclineMTCREDIT">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>MEMBER TRADES - HIGH CREDIT
+</td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedMTBALANCE" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedMTBALANCE" ng-value="false">NO
+<span ng-show="autoapprovedMTBALANCE">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineMTBALANCE" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineMTBALANCE" ng-value="false">NO
+<span ng-show="autodiclineMTBALANCE">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>MEMBER TRADES - BALANCE
+</td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedPASTDUE" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedPASTDUE" ng-value="false">NO
+<span ng-show="autoapprovedPASTDUE">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclinePASTDUE" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclinePASTDUE" ng-value="false">NO
+<span ng-show="autodiclinePASTDUE">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>MEMBER TRADES - PAST DUE
+</td>
+</tr>
+
+
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedFRST" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedFRST" ng-value="false">NO
+<span ng-show="autoapprovedFRST">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineFRST" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineFRST" ng-value="false">NO
+<span ng-show="autodiclineFRST">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>MEMBER TRADES - FRST/DELQ
+
+</td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedMTProfile" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedMTProfile" ng-value="false">NO
+<span ng-show="autoapprovedMTProfile">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineMTProfile" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineMTProfile" ng-value="false">NO
+<span ng-show="autodiclineMTProfile">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+<td>TRADE PAYMENT PROFILE
+
+</td>
+</tr>
+
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedCreditUtil" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedCreditUtil" ng-value="false">NO
+<span ng-show="autoapprovedCreditUtil">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineCreditUtil" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineCreditUtil" ng-value="false">NO
+<span ng-show="autodiclineCreditUtil">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+
+<td>CREDIT UTILIZATION
+
+</td>
+</tr>
+<tr>
+<td><input type="text" class="tl-Inputbox" name="pre-approval"></td>
+<td> 
+<input type="radio"  ng-model="autoapprovedMTAmount" ng-value="true">Yes
+<input type="radio"  ng-model="autoapprovedMTAmount" ng-value="false">NO
+<span ng-show="autoapprovedMTAmount">
+<input type="text" class="tl-Inputbox" name="auto-approval">
+</span>
+  </td>
+<td><input type="radio"  ng-model="autodiclineMTAmount" ng-value="true">Yes
+<input type="radio"  ng-model="autodiclineMTAmount" ng-value="false">NO
+<span ng-show="autodiclineMTAmount">
+<input type="text" class="tl-Inputbox" name="auto-decline">
+</span></td>
+
+<td>AMOUNT
+
+</td>
+</tr>
+</table>
+</div>
+
+<p>Please ensure these thresholds are correct before submitting.  Once submitted, changes must be processed through a manual request to your account manager.</p>
+<p> You can also save your work-in-progress, by clicking the Save Progress button.</p>
+<button class="btn btn-info">Save Progress</button>
+<button class="btn btn-info">Submit</button>
+</div>
+</div>

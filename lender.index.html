@@ -1,0 +1,560 @@
+
+<nav id="header" class="navbar menu">
+  <div id="header-container" class="container navbar-container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a id="brand" class="navbar-brand" href="#"> <img src="./assets/images/lender/lenderlogo.png" alt=""></a> </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav pull-right">
+        <li class="active"><a href="#">PRODUCTS</a></li>
+        <li><a href="#about">SOLUTIONS</a></li>
+        <li><a class="m-btn" href="#contact">REQUEST A DEMO</a></li>
+      </ul>
+    </div>
+    <!-- /.nav-collapse --> 
+  </div>
+  <!-- /.container --> 
+</nav>
+<!-- /.navbar -->
+
+<div class="container">
+  <div class="m-form">
+    <form class="form-horizontal" name="lenderform" novalidate>
+
+      <div ng-hide="vm.first">
+        <div class="row">
+          <div class="col-sm-10">
+            <div class="form-group" >
+              <label>Institution Primary Account Owner Name: </label>
+              <input type="text" class="form-group lg-input" ng-model="vm.lenderinfo.name" required>
+            </div>
+            <div class="col-sm-10">
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <label> Email:</label>
+                    <input type="email" class="form-group" ng-model="vm.lenderinfo.email"  required>
+                  </div>
+                  <div class="col-sm-6">
+                    <label> Phone: </label>
+                    <input type="tel" class="form-group" ng-model="vm.lenderinfo.phone"   required>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-10">
+              <div class="form-group">
+                <div class="row">
+                <div class="col-sm-6">
+                    <label>Street Address: </label>
+                    <input type="text" class="form-group" ng-model="vm.oa.streetAddress" ng-change="sameAddress && vm.update()"  required>
+                  </div>
+                  <div class="col-sm-6">
+                    <label> City: </label>
+                    <input type="text" class="form-group" ng-model="vm.oa.city" ng-change="sameAddress && vm.update()"  required>
+                  </div>
+                  <div class="col-sm-6">
+                    <label> Province/State: </label>
+                    <input type="text" class="form-group"  ng-model="vm.oa.provinceOrState" ng-change="sameAddress && vm.update()" required>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label> Country: </label>
+                     <select chosen  disable_search_threshold="5"          
+                    ng-options="obj.country as obj.country for obj in vm.countries"
+                    ng-change="vm.getFinancerList(); vm.getgovtProgram();"
+                    ng-model="vm.lender.Country" 
+                    id="country">
+                    <option>--Choose Country--</option>
+                  </select> 
+                </div>
+                <div class="col-sm-6 p-left">
+                  <label> Zip/Postal Code: </label>
+                  <input type="text" class="form-group"  ng-model="vm.oa.zipOrPostalCode" ng-pattern="vm.zip" ng-change="sameAddress && vm.update()" required>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-10">
+              <div class="form-group">
+                <h4> <strong>Institution Information</strong></h4>
+                <div class="col-sm-12">
+                  <div class="form-group">
+                    <label>Institution Name: </label>
+                    <input type="text" class="form-group lg-input"  ng-model="vm.institutename" required>
+                  </div>
+                </div>
+                <div class="m-12 clearfix">
+
+                 <h5> <input type="checkbox" ng-model="sameAddress" ng-change="sameAddress && vm.update()"> Check this box if Head Office Address is the same as that of the Primary Account Owner:</h5> <p>If not, please provide Head Office Address below:  Another Address<br></p></div>
+
+                 <div class="row">
+                  <div class="col-sm-6">
+                    <label>Street Address: </label>
+                    <input type="text" class="form-group" ng-model="vm.hoa.streetAddress"  ng-disabled="sameAddress" required>
+                  </div>
+                  <div class="col-sm-6">
+                    <label> City: </label>
+                    <input type="text" class="form-group" ng-model="vm.hoa.city" ng-disabled="sameAddress" required>
+                  </div>
+                  <div class="col-sm-6">
+                    <label> Province/State: </label>
+                    <input type="text" class="form-group"  ng-model="vm.hoa.provinceOrState" ng-disabled="sameAddress" required>
+                  </div>
+                  <div class="col-sm-6">
+                    <label> Country: </label>
+                    <select chosen  disable_search_threshold="5"        
+                    ng-options="obj.country as obj.country for obj in vm.countries"
+                   ng-model="vm.lenderHO.country"
+                    id="country" ng-disabled="sameAddress">
+                  </select>
+                </div>
+                <div class="col-sm-6 p-left">
+                  <label> Zip/Postal Code: </label>
+                  <input type="text" class="form-group" ng-model="vm.hoa.zipOrPostalCode" ng-change="sameAddress" ng-disabled="sameAddress" required>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button ng-click="vm.first=true; vm.second=false;" class="btn btn-info">Next</button>
+  </div>
+<div ng-hide="vm.second">
+  <div class="row">
+    <div class="2-step">
+      <div class="check"> <label>Type of Financial Institution: (check all those that apply) </label>
+      <div ng-repeat="item in vm.list"><span>
+        <input type="checkbox" ng-model="item.selected" value="{{item.value}}"/>
+        <label>{{item.value}}</label></span>
+      </div>
+      <div  ng-show="vm.list" >
+        <input  type="checkbox" ng-model="vm.otherbank"/>
+        <label>other</label>
+        <span ng-show="vm.otherbank">
+        <input type="text" ng-model="vm.otherfinancer"/></span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="form-group">
+    <div  class="radio-sec">
+      <label> Are your deposits and/or loans guaranteed by any government program:</label>
+      <input type="radio"  ng-model="vm.govtprogram" ng-value="true" ng-change="vm.getgovtProgram()">Yes
+      <input type="radio"  ng-model="vm.govtprogram" ng-value="false" ng-change="vm.getgovtProgram()">NO
+    </div>
+    <div class="form-group">
+      <div class="cont-check">
+        <label>If yes, please select all that apply: </label><br>
+        <div ng-show="vm.govtprogram">
+          <div ng-repeat="item in vm.countryGovtPrograms">
+            <input type="checkbox"  ng-model="item.selected" value="{{item.value}}"/>
+            <label>{{item.value}}</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <button ng-click="vm.second=true; vm.first=false;" class="btn btn-info">Back</button>
+  <button ng-click="vm.second=true; vm.third=false;" class="btn btn-info">Next</button>
+</div>
+</div>
+<div ng-hide="vm.third">
+  <div class="row">
+    <div class="form-group">
+      <div class="customer-type">
+        <div class="consumer">
+          <div>
+            <label>Customer Types</label>
+          </div>
+          <ul>
+          <li ng-repeat="customer in vm.customertypes">
+            <input type="checkbox"  ng-model="customer.status" ng-value="customer.value"/><span>{{customer.value}}</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <label> Please indicate sub-types of customers to whom you offer special services: (check all that apply)</label>
+    <div class="customer-group">
+      <div class="consumer">
+        <ul>
+          <li> &nbsp; </li>
+          <li ng-repeat="item in vm.customersubtypes"> <span>{{item.value}}</span>
+          </li>
+        </ul>
+      </div>
+      <div class="customer-check  text-center">
+       <div ng-repeat="customer in vm.customertypes">
+        <div ng-show="customer.status">
+        <div ng-if="customer.value=='Consumers'">
+         <ul>
+         <li> Consumers</li>
+          <li ng-repeat="item in vm.conCustomersubtypes">
+            <input type="checkbox"  ng-model="item.selected"/></li>
+          </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="customer-check  text-center">
+       <div ng-repeat="business in vm.customertypes">
+        <div ng-show="business.status">
+         <div ng-if="business.value=='Small Businesses'">
+         <ul>
+         <li> Small Business</li>
+          <li ng-repeat="item in vm.businessCustomersubtypes">
+            <input type="checkbox"  ng-model="item.selected"/></li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="row">
+      <div class="form-group">
+        <label> Please indicate the types of credit products which you offer: (check all that apply)</label>
+        <div class="product-group">
+          <div class="consumer">
+            <ul> 
+              <li> &nbsp; </li>
+              <li ng-repeat="item in vm.producttypes">
+               <span>{{item.value}}</span>
+             </li> 
+           </ul>
+         </div>
+         <div class="customer-check  text-center">
+           <div ng-repeat="customer in vm.customertypes">
+            <div ng-show="customer.status">
+              <div ng-if="customer.value=='Consumers'">
+                <ul>
+                  <li> Consumers </li>
+                  <li ng-repeat="item in vm.consumerProducttypes">
+                   <input type="checkbox" ng-model="item.selected" />
+                 </li>
+               </ul>
+             </div>
+           </div>
+         </div>
+       </div>
+       <div class="customer-check  text-center">
+        <div ng-repeat="customer in vm.customertypes">
+          <div ng-show="customer.status">
+            <div ng-if="customer.value=='Small Businesses'">
+              <ul>
+                <li> Small Business</li>
+                <li ng-repeat="item in vm.businessProducttypes">
+                 <input type="checkbox" ng-model="item.selected" />
+               </li>
+             </ul>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="customer-check  text-center">
+      <div ng-repeat="customer in vm.customertypes">
+          <div ng-show="customer.status">
+            <div ng-if="customer.value=='Commercial'">
+              <ul>
+                <li> Commercial </li>
+                <li ng-repeat="item in vm.commercialProducttypes">
+                 <input type="checkbox" ng-model="item.selected" />
+               </li>
+             </ul>
+           </div>
+         </div>
+      </div>
+   </div>
+ </div>
+</div>
+</div>
+<div class="row">
+ <div class="form-group">
+  <label> Please indicate what types of products and customers you will manage through IND Engage:</label>
+  <div class="product-group">
+    <div class="consumer">
+      <ul> <li>&nbsp;</li>
+        <li ng-repeat="INDproduct in  vm.INDproducttypes">
+          <span>{{INDproduct.value}}</span>
+        </li>
+      </ul>
+    </div>
+    <div class="customer-check text-center">
+      <div ng-repeat="customer in vm.customertypes">
+        <div ng-show="customer.status">
+          <div ng-if="customer.value=='Consumers'">
+            <ul><li> Consumers </li>
+             <li ng-repeat="item in  vm.INDconsumersProductTypes">
+               <input type="checkbox" ng-model="item.selected"/>
+             </li>
+           </ul>
+         </div>
+       </div>
+     </div>
+   </div>
+   <div class="customer-check  text-center">
+    <div ng-repeat="customer in vm.customertypes">
+      <div ng-show="customer.status">
+        <div ng-if="customer.value=='Small Businesses'">
+          <ul><li> Small Businesses </li>
+           <li ng-repeat="item in vm.INDbusinessProductTypes">
+             <input type="checkbox" ng-model="item.selected" />
+           </li>
+         </ul>
+       </div>
+     </div>
+   </div>
+ </div>
+ <div class="customer-check  text-center">
+   <div ng-repeat="customer in vm.customertypes">
+    <div ng-show="customer.status">
+      <div ng-if="customer.value=='Commercial'">
+        <ul>
+         <li> Commercial </li>
+         <li ng-repeat="item in vm.INDcommercialProductTypes">
+           <input type="checkbox" ng-model="item.selected"/>
+         </li>
+       </ul>
+     </div>
+   </div>
+ </div>
+</div>
+</div>
+</div>
+<button ng-click="vm.second=false; vm.third=true;" class="btn btn-info">Back</button>
+<button  ng-click="vm.third=true; vm.fourth=false;" class="btn btn-info">Next</button>
+</div>
+</div>
+<div ng-hide="vm.fourth">
+  <div class="row">
+    <p> Date you would like service to begin: </p>
+    <input type="date" ng-model="vm.startdate" name="startdate">
+  </div>
+  <div class="row">
+    <h3>Will you require any application customizations?</h3>
+    <input type="radio"  ng-model="vm.customizations" ng-value="true">Yes
+    <input type="radio"  ng-model="vm.customizations" ng-value="false">NO
+    
+    <div ng-show="vm.customizations">
+    <label>Please identify who the primary lead for customization in your organization will be.  We will follow up to make an appointment to discuss the customizations.</label>
+      <label>first name:</label>
+      <input type="text" ng-model=vm.primaryLeadFName >
+      <label>last name:</label>
+      <input type="text" ng-model=vm.primaryLeadLName  >
+      <label>email:</label>
+      <input type="email" ng-model=vm.primaryLeadEmail >
+    </div>
+  </div>
+  <div class ="row">
+    <p>Will you need any support with integration to your mobile or online banking application?</p>
+    <input type="radio"  ng-model="vm.integration" ng-value="true">Yes
+    <input type="radio"  ng-model="vm.integration" ng-value="false">NO
+    <div ng-show="vm.integration">
+      <label>Please identify who the primary lead for integration in your organization will be.  We will follow up to make an appointment to discuss the customizations.</label>
+      <label>first name:</label>
+      <input type="phone" ng-model="vm.integratorFname">
+      <label>last name:</label>
+      <input type="phone" ng-model="vm.integratorLname" >
+      <label>email:</label>
+      <input type="email" ng-model="vm.integratorEmail">
+    </div>
+    </div>
+     <div class ="row">
+      <h3> Will you be using your company’s Active Directory for user management? </h3>
+      <input type="radio"  ng-model="vm.directory" ng-value="true">Yes
+      <input type="radio"  ng-model="vm.directory" ng-value="false">NO
+      <div ng-show="vm.directory">
+        <label>Please provide the names of your organization’s Active Directory leads who will be responsible for this.  We will follow up to make an appointment and execute the integration.</label></br>
+        <label>first name:</label>
+        <input type="text"  ng-model="vm.directoryFname">
+        <label>last name:</label>
+        <input type="text" ng-model="vm.directoryLname">
+        <label>email:</label>
+        <input type="email" ng-model="vm.directoryEmail">
+      </div>
+      </div> 
+      <div class="row">
+      <div ng-hide=vm.directory>
+      <h3>please list the following individuals for key roles:</h3><br>
+      <label>Technical administrator and liaison</label>
+      <div ng-repeat="techadmin in vm.techadmins">
+        <label>first name:</label>
+        <input type="text" ng-model="techadmin.fname">
+        <label>last name:</label>
+        <input type="text" ng-model="techadmin.lname">
+        <label>email:</label>
+        <input type="email" ng-model="techadmin.email">
+        <button class="remove" ng-show="$last" ng-click="vm.removeField('admin')">-</button>
+      </div>
+      <button ng-click="vm.addField('admin')">Add more</button>
+    </br>
+      <div><label>Business Owners</label>
+      <div  ng-repeat="owner in vm.bizOwners">
+        <label>first name:</label>
+        <input type="phone" ng-model="owner.fname">
+        <label>last name:</label>
+        <input type="phone" ng-model="owner.lname">
+        <label>email:</label>
+        <input type="email" ng-model="owner.email">
+        <button class="remove" ng-show="$last" ng-click="vm.removeField('owner')">-</button>
+      </div>
+      </div>
+      <button class="addfields" ng-click="vm.addField('owner')">Add more</button>
+    <label>Credit Account Managers</label>
+      <div ng-repeat="manager in vm.Managers">
+        <label>first name:</label>
+        <input type="text" ng-model="manager.fname">
+        <label>last name:</label>
+        <input type="text" ng-model="manager.lname">
+        <label>email:</label>
+        <input type="email" ng-model="manager.email">
+        <button class="remove" ng-show="$last" ng-click="vm.removeField('manager')">-</button>
+      </div>
+      <button ng-click="vm.addField('manager')">Add more</button>
+    </div>
+  </div>
+  
+<label>  Choice Banking charges $.02 for each dollar loaned through our system at the time of funds disbursement.  The amount is automatically calculated based on the disbursed amount, and billed to the primary Lender Account.  For revolving accounts and credit cards, the $.02 is calculated on the upper limit offered to the borrower of the product. Please acknowledge these billing policies by checking the box here: <input type="checkbox" name="policy" ng-model="accept"> </label>
+
+
+<h4>Please initial below to accept the billing policy.</h4>
+<label> Signature </label>
+<input type="text"  ng-model="vm.signature" name="signanture" placeholder="signature">
+<label> Date</label>
+<input type="date" ng-model="vm.acceptdate" name="acceptdate">
+<!-- <label>{{indconsumer}}</label> -->
+<div class="row">
+
+  <h3>Please fill out the underwriting thresholds in order to complete your account set-up. If you are not ready to set them up now, you can get to these pages from your account profile page.</h3>
+</div>
+
+<div ng-repeat="item in vm.INDconsumersProductTypes">
+  <div ng-show="item.selected">
+  <div ng-if="item.value=='Term Loans'">
+    <a ui-sref="lender.consumertermloan">Consumers term loan</a>
+    <span>
+     <button class="btn">Waiting</button>
+     <button class="btn">Progress</button>
+     <button class="btn">Complete</button>
+     </span>
+    </div>
+    <div ng-if="item.value=='Lines of Credit'">
+      <a ui-sref="lender.consumerlinecreditloan">Consumers Lines of Credit
+      </a>
+      <span>
+     <button class="btn">Waiting</button>
+     <button class="btn">Progress</button>
+     <button class="btn">Complete</button>
+     </span>
+    </div>
+    <div ng-if="item.value=='Credit Card self-issued'">
+     <a ui-sref="lender.consumercreditcardloan">Consumers Credit Card self-issued
+     </a>
+     <span>
+     <button class="btn">Waiting</button>
+     <button class="btn">Progress</button>
+     <button class="btn">Complete</button>
+     </span>
+   </div>
+    <div ng-if="item.value=='Mortgages'">
+     <a ui-sref="lender.consumermortgages">Consumers Mortgages
+</a>
+<span>
+     <button class="btn">Waiting</button>
+     <button class="btn">Progress</button>
+     <button class="btn">Complete</button>
+     </span>
+    </div>
+  </div>
+</div>
+<div ng-repeat="item in vm.INDbusinessProductTypes">
+  <div ng-show ="item.selected">
+    <div ng-if="item.value=='Term Loans'">
+    <a ui-sref="lender.businesstermloan">Business term loan</a>
+    <span>
+     <button class="btn">Waiting</button>
+     <button class="btn">Progress</button>
+     <button class="btn">Complete</button>
+     </span>
+    </div>
+    <div ng-if="item.value=='Lines of Credit'">
+    <a ui-sref="lender.businesslinecreditloan">Business Lines of Credit
+</a>
+<span>
+     <button class="btn">Waiting</button>
+     <button class="btn">Progress</button>
+     <button class="btn">Complete</button>
+     </span>
+    </div>
+    <div ng-if="item.value=='Credit Card self-issued'">
+    <a ui-sref="lender.BusinessCreditCardLoan">Business Credit Card self-issued
+</a> <span>
+     <button class="btn">Waiting</button>
+     <button class="btn">Progress</button>
+     <button class="btn">Complete</button>
+     </span>
+    </div>
+    <div ng-if="item.value=='Mortgages'">
+    <a ui-sref="lender.businessmortagagesloan">Business Mortgages
+</a>
+      <span>
+     <button class="btn">Waiting</button>
+     <button class="btn">Progress</button>
+     <button class="btn">Complete</button>
+     </span>
+    </div>
+  </div>
+</div>
+<div ng-repeat="item in vm.INDcommercialProductTypes">
+  <div ng-show ="item.selected">
+    <div ng-if="item.value=='Term Loans'">
+    <a href>Business term loan</a>
+    <span>
+     <button class="btn">Waiting</button>
+     <button class="btn">Progress</button>
+     <button class="btn">Complete</button>
+     </span>
+    </div>
+    <div ng-if="item.value=='Lines of Credit'">
+    <a href>Business Lines of Credit
+</a>
+<span>
+     <button class="btn">Waiting</button>
+     <button class="btn">Progress</button>
+     <button class="btn">Complete</button>
+     </span>
+    </div>
+    <div ng-if="item.value=='Credit Card self-issued'">
+    <a href>Business Credit Card self-issued
+</a>
+<span>
+     <button class="btn">Waiting</button>
+     <button class="btn">Progress</button>
+     <button class="btn">Complete</button>
+     </span>
+    </div>
+    <div ng-if="item.value=='Mortgages'">
+    <a href>Business Mortgages
+</a>
+<span>
+     <button class="btn">Waiting</button>
+     <button class="btn">Progress</button>
+     <button class="btn">Complete</button>
+     </span>
+    </div>
+  </div>
+</div>
+
+ <button ng-click="vm.fourth=true; vm.third=false;" class="btn btn-info">back</button>
+<button type="submit" ng-click="vm.submit()" class="btn btn-info">Save</button>
+</div>
+</form>
+</div>
+</div>
